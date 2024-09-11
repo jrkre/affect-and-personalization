@@ -1,0 +1,11 @@
+filepath: examples/bvh/fair1/dab.bvh
+start_frame_idx: 0
+end_frame_idx: 339 
+groundplane_joint: mouth_lower_center
+forward_perp_joint_vectors:
+  - - left_eye_inner_corner
+    - right_eye_inner_corner
+  - - mouth_left_middle
+    - mouth_right_middle
+scale: 0.025
+up: +z
