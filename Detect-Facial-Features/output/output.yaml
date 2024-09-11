@@ -1,0 +1,357 @@
+root:
+  channels:
+  - x-pos
+  - y-pos
+  - z-pos
+  - x-rot
+  - y-rot
+  - z-rot
+  children:
+  - nose_base_nose:
+      channels:
+      - x-rot
+      - y-rot
+      - z-rot
+      children:
+      - channels:
+        - x-rot
+        - y-rot
+        - z-rot
+        children: null
+        offset: !!python/tuple
+        - 1811
+        - 1321
+      - left_eye_inner_corner:
+          channels:
+          - x-rot
+          - y-rot
+          - z-rot
+          children:
+          - left_eye_lower_right_middle:
+              channels:
+              - x-rot
+              - y-rot
+              - z-rot
+              children:
+              - left_eye_lower_middle:
+                  channels:
+                  - x-rot
+                  - y-rot
+                  - z-rot
+                  children:
+                  - left_eye_lower_left_middle:
+                      channels:
+                      - x-rot
+                      - y-rot
+                      - z-rot
+                      children:
+                      - left_eye_outer_corner:
+                          channels:
+                          - x-rot
+                          - y-rot
+                          - z-rot
+                          children:
+                          - left_eye_upper_left_middle:
+                              channels:
+                              - x-rot
+                              - y-rot
+                              - z-rot
+                              children:
+                              - left_eye_upper_middle:
+                                  channels:
+                                  - x-rot
+                                  - y-rot
+                                  - z-rot
+                                  children:
+                                  - channels:
+                                    - x-rot
+                                    - y-rot
+                                    - z-rot
+                                    children: null
+                                    offset: !!python/tuple
+                                    - 1584
+                                    - 944
+                                  offset: !!python/tuple
+                                  - 1517
+                                  - 769
+                              offset: !!python/tuple
+                              - 1140
+                              - 730
+                          offset: !!python/tuple
+                          - 827
+                          - 686
+                      offset: !!python/tuple
+                      - 731
+                      - 1015
+                  offset: !!python/tuple
+                  - 938
+                  - 1059
+              offset: !!python/tuple
+              - 1271
+              - 1099
+          - left_eyebrow_inner:
+              channels:
+              - x-rot
+              - y-rot
+              - z-rot
+              children:
+              - left_eyebrow_middle_right:
+                  channels:
+                  - x-rot
+                  - y-rot
+                  - z-rot
+                  children:
+                  - left_eyebrow_middle_left:
+                      channels:
+                      - x-rot
+                      - y-rot
+                      - z-rot
+                      children:
+                      - channels:
+                        - x-rot
+                        - y-rot
+                        - z-rot
+                        children: null
+                        offset: !!python/tuple
+                        - 787
+                        - 547
+                      offset: !!python/tuple
+                      - 1049
+                      - 563
+                  offset: !!python/tuple
+                  - 1271
+                  - 579
+              offset: !!python/tuple
+              - 1465
+              - 627
+          offset: !!python/tuple
+          - 1688
+          - 1150
+      - right_eye_inner_corner:
+          channels:
+          - x-rot
+          - y-rot
+          - z-rot
+          children:
+          - right_eye_lower_left_middle:
+              channels:
+              - x-rot
+              - y-rot
+              - z-rot
+              children:
+              - right_eye_lower_middle:
+                  channels:
+                  - x-rot
+                  - y-rot
+                  - z-rot
+                  children:
+                  - right_eye_lower_right_middle:
+                      channels:
+                      - x-rot
+                      - y-rot
+                      - z-rot
+                      children:
+                      - right_eye_outer_corner:
+                          channels:
+                          - x-rot
+                          - y-rot
+                          - z-rot
+                          children:
+                          - right_eye_upper_right_middle:
+                              channels:
+                              - x-rot
+                              - y-rot
+                              - z-rot
+                              children:
+                              - right_eye_upper_middle:
+                                  channels:
+                                  - x-rot
+                                  - y-rot
+                                  - z-rot
+                                  children:
+                                  - channels:
+                                    - x-rot
+                                    - y-rot
+                                    - z-rot
+                                    children: null
+                                    offset: !!python/tuple
+                                    - 2406
+                                    - 992
+                                  offset: !!python/tuple
+                                  - 2532
+                                  - 837
+                              offset: !!python/tuple
+                              - 2826
+                              - 793
+                          offset: !!python/tuple
+                          - 3239
+                          - 750
+                      offset: !!python/tuple
+                      - 3183
+                      - 1087
+                  offset: !!python/tuple
+                  - 2917
+                  - 1103
+              offset: !!python/tuple
+              - 2604
+              - 1122
+          - right_eyebrow_inner:
+              channels:
+              - x-rot
+              - y-rot
+              - z-rot
+              children:
+              - right_eyebrow_middle_left:
+                  channels:
+                  - x-rot
+                  - y-rot
+                  - z-rot
+                  children:
+                  - right_eyebrow_middle_right:
+                      channels:
+                      - x-rot
+                      - y-rot
+                      - z-rot
+                      children:
+                      - channels:
+                        - x-rot
+                        - y-rot
+                        - z-rot
+                        children: null
+                        offset: !!python/tuple
+                        - 3223
+                        - 587
+                      offset: !!python/tuple
+                      - 2981
+                      - 591
+                  offset: !!python/tuple
+                  - 2771
+                  - 611
+              offset: !!python/tuple
+              - 2564
+              - 654
+          offset: !!python/tuple
+          - 2310
+          - 1150
+      - mouth_upper_center:
+          channels:
+          - x-rot
+          - y-rot
+          - z-rot
+          children:
+          - mouth_upper_right_middle:
+              channels:
+              - x-rot
+              - y-rot
+              - z-rot
+              children:
+              - mouth_upper_right:
+                  channels:
+                  - x-rot
+                  - y-rot
+                  - z-rot
+                  children:
+                  - mouth_right_middle:
+                      channels:
+                      - x-rot
+                      - y-rot
+                      - z-rot
+                      children:
+                      - mouth_lower_right:
+                          channels:
+                          - x-rot
+                          - y-rot
+                          - z-rot
+                          children:
+                          - mouth_lower_right_middle:
+                              channels:
+                              - x-rot
+                              - y-rot
+                              - z-rot
+                              children:
+                              - mouth_lower_center:
+                                  channels:
+                                  - x-rot
+                                  - y-rot
+                                  - z-rot
+                                  children:
+                                  - mouth_lower_left_middle:
+                                      channels:
+                                      - x-rot
+                                      - y-rot
+                                      - z-rot
+                                      children:
+                                      - mouth_lower_left:
+                                          channels:
+                                          - x-rot
+                                          - y-rot
+                                          - z-rot
+                                          children:
+                                          - mouth_left_middle:
+                                              channels:
+                                              - x-rot
+                                              - y-rot
+                                              - z-rot
+                                              children:
+                                              - mouth_upper_left:
+                                                  channels:
+                                                  - x-rot
+                                                  - y-rot
+                                                  - z-rot
+                                                  children:
+                                                  - channels:
+                                                    - x-rot
+                                                    - y-rot
+                                                    - z-rot
+                                                    children: null
+                                                    offset: !!python/tuple
+                                                    - 1620
+                                                    - 1654
+                                                  offset: !!python/tuple
+                                                  - 1394
+                                                  - 1654
+                                              offset: !!python/tuple
+                                              - 1422
+                                              - 1813
+                                          offset: !!python/tuple
+                                          - 1497
+                                          - 1948
+                                      offset: !!python/tuple
+                                      - 1695
+                                      - 1948
+                                  offset: !!python/tuple
+                                  - 1858
+                                  - 1936
+                              offset: !!python/tuple
+                              - 2005
+                              - 1936
+                          offset: !!python/tuple
+                          - 2326
+                          - 1912
+                      offset: !!python/tuple
+                      - 2521
+                      - 1785
+                  offset: !!python/tuple
+                  - 2715
+                  - 1622
+              offset: !!python/tuple
+              - 2398
+              - 1630
+          offset: !!python/tuple
+          - 1993
+          - 1642
+      - channels:
+        - x-rot
+        - y-rot
+        - z-rot
+        children: null
+        offset: !!python/tuple
+        - 2152
+        - 1301
+      offset: !!python/tuple
+      - 1949
+      - 1349
+  offset: !!python/tuple
+  - 2001
+  - 1400
+  - 0
