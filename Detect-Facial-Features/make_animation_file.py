@@ -9,7 +9,7 @@ import yaml
 from matplotlib import pyplot as plt
 from matplotlib import image as mpimg
 from matplotlib.widgets import Button
-from detect_face_features import get_features_coordinates, get_frame_time,main 
+#from detect_face_features import get_features_coordinates, get_frame_time,main 
 import numpy as np
 from Joint import Joint, JointTree
 
@@ -151,8 +151,6 @@ def get_channels(joint_name):
     else:
         return channels[3:]
     return channels[:range]
-        
-    
 
 def config_to_joints(config):
     array = config.skeleton
@@ -168,15 +166,16 @@ def config_to_joints(config):
     while tree.__len__() != length:
         #print (joints.count())
         
-        #print(count)
+        # print(count)
         
     
+        #print(f'names: {names}')
         names = tree.get_names_of_subtree(0)
-        print(names)
         
         for x in names:
-            print (x)
+            # print (x)
             for node in array:
+                
                 #print(f'comparing {x[0].name} and {node["name"]} count {count}')
                 if(node["name"] == "root"):
                     print("only once")
@@ -184,13 +183,13 @@ def config_to_joints(config):
                 
                 # print(x.__getitem__(names[count]).name)
                 if node["parent"] == x:
-                    print(f'found match {node['name']}')
-                    pt = convert_2d_points_to_3d((node['loc'][0],node['loc'][1]),0)
-                    new_node = Joint(offset=(node['loc'][0],node['loc'][1]), name=node['name'], identifier=node["name"],channels=get_channels(node['name']))
-                    print(f'found match adding {node['name']} to {x}')
+                    # print(f'found match {node["name"]}')
+                    pt = convert_2d_points_to_3d((node["loc"][0],node["loc"][1]),0)
+                    new_node = Joint(offset=(node["loc"][0],node["loc"][1]), name=node["name"], identifier=node["name"],channels=get_channels(node['name']))
+                    print(f'found match adding {node["name"]} to {x}')
                     tree.create_joint_from_joint(node=new_node, parent_id=node["parent"])
                     
-                    print(f'input: {x}')
+                    # print(f'input: {x}')
                     last_node = tree.__getitem__(new_node.name)
                     
                     last_node=new_node.name
@@ -198,7 +197,8 @@ def config_to_joints(config):
                     # print(joints.get_names(list=[]))
                     array.remove(node)
                     # joints.print()
-                    # print(len(array))
+                    # print(array)
+                    time.sleep(.1)
                     count = count + 1
         #tree.show(0)
     return root_joint
@@ -232,6 +232,7 @@ def coordinates_to_joint_offset(current_coordinates):
     
 
 def zero_joints():
+    # zero the current facial features - set them as a neutral affect
     pass
 
 

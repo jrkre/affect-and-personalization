@@ -145,10 +145,10 @@ class JointTree:
         nodes = []
         queue = self[position].fpointer
         if level == _ROOT:
-            nodes.append(self)
+            nodes.append(self[0])
             #print("{0} [{1}]".format(self[position].name, self[position].identifier))
         else:
-            nodes.append(self)
+            nodes.append(self[0])
             #print("\t"*level, "{0} [{1}]".format(self[position].name, self[position].identifier))
         if self[position].expanded:
             level += 1
@@ -156,20 +156,33 @@ class JointTree:
                 self.get_subtree(element, level)  # recursive call
         return nodes
 
-    def get_names_of_subtree(self,position,level=_ROOT):
-        nodes = []
-        queue = self[position].fpointer
-
-        if self[position].expanded:
-            level += 1
-            for element in queue:
-               nodes.append(self.get_names_of_subtree(element, level))  # recursive call
+    # def get_names_of_subtree(self,position,level=_ROOT):
+    #     nodes = []
+    #     queue = self[position].fpointer
         
-        if level == _ROOT:
-            nodes.append(self[position])
+    #     nodes.append(self[position].name)
 
-        return 
+    #     if self[position].expanded:
+    #         level += 1
+    #         for element in queue:
+    #             nodes.append(self.get_names_of_subtree(element, level)[position].name)  # recursive call
+    #     return nodes
+        
+    def __get_names_of_subtree_rec(self, nodes, cur_node):
 
+        if cur_node.expanded:
+            for element in cur_node.fpointer:
+                print (element)
+                nodes.append(element.name)
+
+                self.get_names_of_subtree(nodes, element)
+
+            return nodes
+
+        return None
+
+    def get_names_of_subtree(self, position):
+        return self.__get_names_of_subtree_rec([self[position]], self[position])
 
     def expand_tree(self, position, mode=_DEPTH):
         # Python generator. Loosly based on an algorithm from 'Essential LISP' by
